@@ -56,7 +56,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip install -U \
-    setuptools
+    setuptools==47.1.0
 
 # Install some pip packages needed for testing ROS 2
 RUN if [[ "${ROS_VERSION}" == "ros2" ]]; then \
